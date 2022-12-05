@@ -1,0 +1,32 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:30px;
+    font-weight: bold;
+    text-align: justify;
+}
+.mavi{
+    background-color:rgb(119, 119, 251);
+    width: 600px;   
+    padding:30px;
+    margin-top:20px;
+    top:0;
+    position:absolute;
+   
+}
+.pink{
+    background-color:rgb(234, 32, 170);
+    width: 600px;   
+    padding:30px;
+    margin-top:20px;
+    top:50px;
+   position:relative;
+   
+}
+.turuncu{
+    background-color:rgb(227, 104, 10);
+    width: 600px;   
+    padding:30px;
+    top:100px;
+    position:fixed;
+}
+

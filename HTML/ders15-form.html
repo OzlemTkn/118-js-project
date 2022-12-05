@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+</head>
+<body>
+    <h3 style="color:rgb(7, 104, 104)"></h3>
+    <form >
+      <fieldset style="background-color:rgb(176, 240, 241)">
+       <legend style="color:rgb(199, 73, 44); font-size:200%; font-family:monospace"> Open an Account</legend>
+       <label for="fullname"> Full Name</label><br>
+       <input type="text" placeholder="Enter full name"><br>
+       <label for="username">UserName</label><br>
+       <input type="text" placeholder="Enter username" ><br>
+       <label> Password </label><br>
+       <input type="password" min="8" placeholder="Enter your password"><br>
+       <label>Re-type Password</label><br>
+       <input type="password" placeholder="Enter your password"><br><br>
+       <label>Languages:</label><br>
+       <input type="checkbox" name="English"> 
+       <label> English </label><br>
+       <input type="checkbox" name="Spanish"> 
+       <label> Spanish </label><br>
+       <input type="checkbox" name="German"> 
+       <label> German </label><br><br>
+       <label for="gender" > Gender:</label> <br>
+       <input type="radio" name="Gender">
+       <label>Female</label><br>
+       <input type="radio" name="Gender">
+       <label>Male</label><br>
+       <input type="radio" name="Gender">
+       <label>Others</label><br>
+       <input type="radio" name="Gender">
+       <label>Prefer not to say</label><br><br>
+       <label for="birthday">Select your birthday</label><br>
+       <input type="date"><br>
+        <LABEL> Country:</LABEL> <br>
+        <select name="country" > 
+        <option value="none" selected>--none--</option>
+        <option value="usa">USA</option>
+        <option value="Turkiye" >Turkiye</option>
+        <option value="Germany">Germany</option>
+        <option value="Canada">Canada</option>
+        </select><br>
+        <label >Select your favorite color</label>
+        <input type="color"><br>
+        <label for="file">Upload your CV</label><br>
+        <input type="file" value="file"> <br><br>
+        <label for="description">Tell us a little about yourself</label><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="describe yourself"></textarea><br>
+        <!-- <input type="button" value="Submit"> -->
+        <button>Gönder</button>
+        </fieldset>
+    </form>
+</body>
+</html>

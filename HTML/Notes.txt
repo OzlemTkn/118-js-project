@@ -1,0 +1,18 @@
+CSS üç farklı türde uygulanır. 
+üç farkli CSS vardır. 
+    1. Inline: Taglar içerisinde kullanilan yerel CSS.
+       Ornek: <h3 style="color:rgb(7, 104, 104)"></h3>  
+    2. Internal CSS: Head etiketleri arasına <style> tagi açılarak yazılır. 
+       İnline Css in aksine aynı isme sahip olan tüm etiketleri etkiler.
+       örnek: 
+       p{
+            color:aqua; 
+            background-color:blueviolet; 
+            font-size:30px
+        }
+        İnline CSS Internal ve External CSS'i override eder. Yani baskın gelir.
+        Özel bir stil girmek istiyorsak inline CSS kullanırız.  
+        .   --> class anlamına gelir. 
+        #   --> id anlamına gelir. 
+    3. External CSS:dişaridan .css uzantılı bir belge olusturulur, stiller bu belgeden çekilir. External Css kullanarak Web sayfamızın agır calışmasını engellemiş oluruz. HTML sayfamız ile CSS sayfamız arasında bağlantı kurmak için <link> tagi kullanılır. 
+    

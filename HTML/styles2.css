@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(247, 181, 194);
+    color:rgb(6, 41, 41);
+    font: 30px verdana;
+}
+
+p {
+    background-color: cornflowerblue;
+    font-size: smaller;
+    color:rgb(25, 15, 35);
+    font-weight: bolder;
+}
+
+div{
+    width:fit-content;
+    height:fit-content;
+    background-image: url(Files/pexels-photo-6775243.jpeg);
+}
+img{
+    width:200px;
+    height: 200px;
+    background-color: rgb(255, 80, 205);
+    border: 6px solid rgb(53, 14, 172);
+    border-radius: 50%;
+    margin-left:30px;
+    padding:40px;
+    
+}
+.brd {
+    border:15px solid red;
+    border-radius:75px 175px / 175px 75px;
+}
+
+#ozel{
+    background-color: rgb(208, 231, 231);
+    color:rgb(94, 54, 5);
+    font-size:40px;
+    padding:40px;
+    margin-top: 30px;
+    border: 10px solid white;
+    letter-spacing: 5px;
+    line-height: 60px;
+    text-align:center ;
+    text-decoration:underline;
+   
+}
+.class-figure{
+    border: 6px dashed blue;
+    width: 350px;
+    background-color: rgb(221, 65, 17);
+}
+
+
+
+

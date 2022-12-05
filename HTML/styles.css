@@ -1,0 +1,48 @@
+body{
+    background-color:bisque;
+}
+p {
+    color:aqua; 
+    background-color:blueviolet; 
+    font-size:30px
+}
+
+h1:hover{
+color:rgb(186, 210, 30);
+font-size: larger;
+font-weight: bold;
+}
+
+li {
+    color:brown
+}
+h1{
+    background-color:brown; 
+    font:18px 'Tahoma';
+    text-align:center
+
+}
+h2{
+    color:aquamarine;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.my-class{
+    
+    font-family:monospace;
+    font-weight:bolder;
+    font-style:oblique;
+    font-size:40px;
+}
+#my-id{
+    color:chartreuse;
+    font-size:200%;
+    background-image: url(Files/bg.jpg);
+}
+#second-id{
+    font:'tahoma'
+}
+input{
+    background-color: green;
+}

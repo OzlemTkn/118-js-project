@@ -15,10 +15,12 @@
     <p class="myClass">Merhaba Dünya!</p>
    <div class="myClass"> Hello</div>
     <script>
-    let test = document.querySelector(".myClass").innerHTML;
-    console.log(test);// Merhaba Dünya!
+    let test = document.querySelector(".myClass").innerHTML;//querySelector ile ilk karsilastigini alir.
+    console.log(test);// Merhaba Dünya!--> consola yazar.
 
-    document.querySelector(".myClass").innerHTML = "<b>Merhaba Batch 118</b>";
+    document.querySelector(".myClass").innerText = "<b>Merhaba Batch 118</b>"//<b>Merhaba Batch 118</b> yazar
+    document.querySelector(".myClass").innerHTML = "<b>Merhaba Batch 118</b>";//bold uyguladı
+
     </script>
 </body>
 </html>

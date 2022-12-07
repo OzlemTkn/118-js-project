@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = '50';
+        let y = 60;
+        let z = 70;
+
+        console.log(x===50);//false
+        console.log(x==50);//true: data tipi kontrolu yapmaz
+        console.log(x==45);//false
+
+        //let y2 = 234567987654321234567n;
+        let y2 = 60n;
+        console.log(y2);
+        console.log(typeof y2);//bigint
+        console.log(typeof y);//number
+        console.log(y===y2);//false
+
+        console.log(y==y2); //true: datatipine bakmaz.
+        console.log(x<y);//true : degerine bakar
+
+        console.log(x > '40');// true: sadece degerine bakar 
+        console.log(x> 'asd'); //false
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myClass{
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <p class="myClass">Merhaba Dünya!</p>
+   <div class="myClass"> Hello</div>
+    <script>
+    let test = document.querySelector(".myClass").innerHTML;
+    console.log(test);// Merhaba Dünya!
+
+    document.querySelector(".myClass").innerHTML = "<b>Merhaba Batch 118</b>";
+    </script>
+</body>
+</html>

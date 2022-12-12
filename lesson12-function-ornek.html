@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Lamba Ornegi</h2>
+    <button onclick="turnOn()">Lambayi Yak</button>
+    <img id ="myLamp" src='files/lamp_off.jpeg' alt="lamp">
+    <button onclick="turnOff()">Lambayi Söndür</button>
+    <script>
+     function turnOn(){
+        document.getElementById('myLamp').src ='files/lamp_on.jpeg';
+     }
+     function turnOff(){
+        document.getElementById('myLamp').src ='files/lamp_off.jpeg';
+     }
+    </script>
+</body>
+</html>

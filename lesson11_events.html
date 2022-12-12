@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript Events</h3>
+    <!-- JS Events: HTML elementlerinin basina gelen seyler:
+    - Sayfanin yuklenmesi, 
+    - Butona tiklanmasi,
+    - HTML icerisindeki inputun degismesi,,,
+    js, bir event oldugunda 'react' tepki verebilir. 
+    Ornek: Butona tiklandiginda tarih/saat getiren bir event olusturun -->
+  
+    <button onclick="tarihGoster()">Tarih/Saat</button>
+    <p id="my-date"></p>
+    <script>
+        function tarihGoster(){
+            document.getElementById("my-date").innerHTML = Date();
+        }
+    //Yaygin kullanilan event'lar: onclick, onchange, onmouseover, onmouseout, onkeydown, onload...
+    //Event'lar JS kodlarini direk calistirabilir. 
+</script>
+</body>
+</html>

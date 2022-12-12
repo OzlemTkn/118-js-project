@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Manipulation</h3>
+    <script>
+//1. length: String'in karakter sayisini verir.
+let txt = 'Ali Veli';
+document.write(txt.length);
+
+document.write('<br>');
+//2. slice(startIndex,EndIndex); verilen index numarasıyla baslar, end indexte sonlandirir, end index dahil degil.
+// slice() tek parametre girdiginiz zaman son indexe kadar yazdirir.
+// slice() substring'den farkli olarak negatif degerler alabilir. Negatif deger alirsa sondan yazmaya baslar.
+// slice(-3) son uc harfi getirir. 
+let str = 'Bugun hava soguk';
+document.write(str.slice(6,10) + '<br>');//hava
+
+//3. substring(startIndex, endIndex); 
+//negatif degerler kullanilmaz, tek parametreli veya iki parametreli kullanilir.
+let str2 = "Apple, Banana, Kiwi";
+document.write(str2.substring(0,5) + '<br>');
+
+//4.Replace(): String icerisindeki herhangi bir degeri bulur ve degistirir. 
+// Replace ilk gordugunu degistirir. 
+//Hepsini degistirmesi için replaceAll() kullanmaliyiz.
+//replaceAll yerine replace(/apex/gi, 'Javascript')--> global ve case-insensitive (gi) kullanabiliriz. 
+//replaceAll buyuk kucuk harfe duyarlidir. 
+let str3 = 'Apex is easy, you can learn Apex';
+let newStr = str3.replaceAll('Apex', 'Javascript');//
+document.write(newStr);//Javascript is easy, you can learn Javascript
+    </script>
+</body>
+</html>

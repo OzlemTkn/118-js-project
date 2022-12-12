@@ -13,13 +13,36 @@
 </head>
 <body>
     <p class="myClass">Merhaba Dünya!</p>
-   <div class="myClass"> Hello</div>
-    <script>
+   <div class="myClass1"> Hello</div>
+    <input id="myClass3" type="text" name="" value="Esma" placeholder="adinizi giriniz">
+    <p id = "myId">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi perferendis vero similique voluptates dignissimos quis ratione fugit! Quo, unde tempore nihil a repellat iste neque error porro consectetur numquam reprehenderit?</p>
+   
+   
+   <script>
     let test = document.querySelector(".myClass").innerHTML;//querySelector ile ilk karsilastigini alir.
     console.log(test);// Merhaba Dünya!--> consola yazar.
 
     document.querySelector(".myClass").innerText = "<b>Merhaba Batch 118</b>"//<b>Merhaba Batch 118</b> yazar
-    document.querySelector(".myClass").innerHTML = "<b>Merhaba Batch 118</b>";//bold uyguladı
+    document.querySelector(".myClass1").innerHTML = "<b>Merhaba Batch 118</b>";//bold uyguladı
+    
+    let myName = document.querySelector("#myClass3");
+    myName.value = "sedat";// form elementlerinden birinin degerini degistirmek icin value kullanilir. 
+
+    document.write("Bu bir deneme yazisidir.");// Direk arayüzde yazmamızı saglar. 
+
+    document.getElementById('myId').style.color="red";//getElementById elemente Id ile ulasir.
+    document.getElementById('myId').style.background="yellow";
+
+    let ad_soyad = "ozlem tekin";
+    document.getElementById('myId').innerHTML= `Benim adim ${ad_soyad}`;
+    //Benim adim ozlem tekin
+
+    
+
+
+
+
+
 
     </script>
 </body>

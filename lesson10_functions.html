@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript Functions</h3>
+    <!-- JS Fonksiyonlari belli bir gorevi yerine getirmek icin kullnilir. 
+    Fonksiyonlar cagiriildiklari zaman calisir.  
+    Parantezler icerisine parametre girebilirsiniz. Parametreler yerel variable olarak calisir,
+    Fonksiyonlari kendi basina, bir eventtan, bir kod blogu icerisinden cagirabilirsiniz. -->
+    <p id="sonuc">sonuc: </p>
+    <p id="toCel"></p>
+    <p class="car"></p>
+    <div id="test"></div>
+
+    <script>
+    
+        function myFunction(n1,n2){
+            return n1*n2;
+        }
+    //return: fonksiyonun calismasının bittigini gosterir, genellikle bir sonuc üretir. 
+     document.getElementById('sonuc').innerHTML = myFunction(23,56);// fonsiyonumuzu cagirdik, parametre degerlerini girdik, sonucu id kullanarak ekranda yazdirdik.
+        function toCelcius(f){
+            return (5/9) * (f-32);
+        }
+     document.getElementById('toCel').innerHTML=`Celcius'tan Fahreight'a Ceviri Sonucu: ${toCelcius(50)}` ; 
+     //document.getElementById('toCel1').innerHTML='Celciustan Fahreighta Ceviri Sonucu:' + toCelcius(50); bu sekilde de yazabilirsiniz. 
+
+     function myCar(){
+        let carName = 'Volvo';
+        document.querySelector('.car').innerHTML= carName + " " + typeof carName;
+     }
+     myCar();
+    // fonksiyonu direk cagirdik. Fonksiyonlar cagirilmadan calismaz.
+    document.getElementById("test").innerHTML = typeof carName;//undefined. Fonksiyon icerisindeki variable'a disardan ulasamayiz. 
+
+    </script>
+</body>
+</html>

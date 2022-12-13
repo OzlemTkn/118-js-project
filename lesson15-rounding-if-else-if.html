@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Love Score Math Random Sample</h3>
+    <script>
+        //1. kullanicidan isimleri aldık
+        let name1 = prompt('isminizi giriniz');
+        let name2 = prompt('Karsilastirmak istediginiz kisi ismini yaziniz');
+        //2. rastgele sayi ürettik
+       let score = Math.random()*100;
+        //document.write(score);
+        //Score'u ust yukarıya yuvarladık
+        score = Math.ceil(score);
+
+        document.write(`${name1} ve ${name2} arasindaki uyum puani ${score} dur `+'<br>');
+
+        if(score >= 80){
+            document.write('Cok uyumlu bir ciftsiniz');
+        }else if (score >=50 && score<80){
+            document.write('Orta derecede uyumlusunuz')
+        }else{
+            document.write('Tamamen uyumsuzsunuz');
+        }
+        
+
+    </script>
+</body>
+</html>

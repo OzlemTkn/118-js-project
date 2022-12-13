@@ -32,8 +32,54 @@ document.write(str2.substring(0,5) + '<br>');
 //replaceAll yerine replace(/apex/gi, 'Javascript')--> global ve case-insensitive (gi) kullanabiliriz. 
 //replaceAll buyuk kucuk harfe duyarlidir. 
 let str3 = 'Apex is easy, you can learn Apex';
-let newStr = str3.replaceAll('Apex', 'Javascript');//
-document.write(newStr);//Javascript is easy, you can learn Javascript
+let newStr = str3.replaceAll('Apex', 'Javascript');
+document.write(newStr + '<br>');//Javascript is easy, you can learn Javascript
+
+//5.toLowerCase-toUpperCase: Buyuk-kucuk harfe cevirir. 
+//6.concat(); iki stringi birlestirir. 
+    let s1 = 'Gazi';
+    let s2 = s1.concat('antep');
+    document.write(s2 + '<br>');//Gaziantep
+//7.trim(); basindaki ve sonundaki bozluklari temizler.
+let s3 = '    javascript   ';
+let trimmed = s3.trim();
+document.write(trimmed);
+
+//8.charAt(); index numarasaına göre karakteri getirir. 
+let text = 'Hello World!';
+document.write(text.charAt(6)+'<br>');//W
+
+//9. split(); stringi parçalara ayirmak icin kullanilir. 
+let text2 = 'Hello|JS|Apex|HTML|CSS';
+document.write(text2.split('|') + '<br>');//Hello,JS,Apex,HTML,CSS
+//10. indexOf(), lastIndexOf();
+let text3 = 'I love JS, JS is very easy!';
+document.write(text3.indexOf('JS')+ '<br>');//7
+document.write(text3.lastIndexOf('JS')+ '<br>');//11
+
+//11.search(); indexOf() gibi specific bir stringi bularak index numarasini getirir.
+let text4 = 'I love JS, JS is very easy!';
+document.write(text4.search('JS'));
+
+//12.match(); string icerisinden arama yaparak tüm eslesen ifadeleri getirir.
+let text5 = 'I love JS, JS is very easy!,JS';
+document.write(text5.match(/JS/g)+ '<br>');//JS,JS,JS -->(3)
+
+//13. includes('searchValue', startIndex); boolean return eder. Herhangi bir karakter/lerin olup olmadigini kontrol eder.
+let text6 = 'I love JS, JS is very easy!';
+document.write(text6.includes(' ')+'<br>');//true
+document.write(text6.includes('love', 6)+ '<br>');//false
+
+//14. startsWith(searchValue, startIndex); belli bir karakterle vbaslayip baslamadigini sorgular. Boolean return eder. 
+let text7 = 'I love JS, JS is very easy!';
+document.write(text7.startsWith('I'));//True
+document.write(text7.startsWith('I',6)+'<br>');//False
+
+//15. endsWith(searchValue, length); belli bir karakterle vbaslayip baslamadigini sorgular. Boolean return eder. 
+let text8 = 'I love JS, JS is very easy!';
+document.write(text8.endsWith('easy!')+'<br>');//True
+document.write(text8.endsWith('easy!',11));//false
+
     </script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Number Methods</h3>
+    <script>
+        let a = '100';//numeric string
+        let b = 1.23;
+        let c= 1n;
+        let d = 1234567809876543465n;// bigInt data tipinde bir degeri number bir degerle toplayamayiz, her ikisi de bigInt olmalidir.
+        document.write(typeof d);//bigInt
+        let topla = c+d;
+        document.write(topla +'<br>');
+    //1. toString(); number bir degeri string'e cevirir.
+    let x = 133;
+    let y = x.toString();
+    document.write(y);
+    document.write(typeof y);//string
+    document.write(y+12 + '<br>');//13312 y string oldugu için, concat yaptı.
+
+    //2.toFixed(); stringe cevirir, 
+    let n = 9.68789;
+    document.write(n.toFixed());//10 herhangi bir parametre olmazsa yuvarlar.
+    document.write(n.toFixed(2)+'<br>');//9.69 virgülden sonra iki basamaktan sonra yuvarlar.
+    // 3. toPrecision();String'e cevirir, bir parametre degeri girilirse istenilen length kadar yazar.
+
+    let num = 123.355;
+    document.write(num.toPrecision(3)+ '<br>');//123
+     //4. number();
+     document.write(Number(true)+ '<br>');//1
+     document.write(Number(false)+ '<br>');//0
+     document.write(Number('   15   ')+ '<br>');//15
+     document.write(Number('Ela')+ '<br>');//NaN
+     document.write(Number(null)+ '<br>');//0
+     document.write(Number(undefined)+ '<br>');//NaN
+     document.write(Number('12,12,2002')+ '<br>');//NaN
+    let d1 = new Date("12-2-2020");//tarihi de number'a cevirir.
+    document.write(Number(d1)+'<br>');//1606856400000
+    //Math.random(); 0-0.99999... arasında rastgele bir sayı getirir. 
+    let rndm = Math.random();
+    rndm *=10;
+    num = Math.floor(rndm);//kucuge yuvarlar. 
+    //Math.ceil(num); buyuk sayiya yuvarlar. 
+    //Math.round(num); yakin olana yuvarlar. 
+    document.write(num);
+    </script>
+   
+</body>
+</html>

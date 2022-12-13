@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <fieldset>
+            <legend>Mesaj Gönder</legend>
+            <label>Rumuzunuz:         </label> <input type="text"/> <br/><br/>
+            <label>e-Posta Adresiniz:  </label> <input type="email"/> <br/><br/>
+            <label>Doğum Tarihiniz:   </label> <input type="date"/> <br/><br/>
+            <label>Mesajınız:         </label> <textarea  rows="2" cols="18"></textarea> <br/><br/>
+            <input type="submit" value="Onayla" onclick="onayla()"/><br/><br/>
+            <input type="reset" value="Formu Temizle" onclick="return temizle()"/>
+        </fieldset>
+    </form>
+    <script>
+        function onayla() {
+            alert("Mesajınız başarı ile gönderildi. Sizinle en yakın zamanda iletişime geçeceğiz.");
+        }
+        function temizle() {
+            return confirm("Form temizlensin mi?");
+        }
+
+       
+
+
+    </script>  
+</body>
+</html>

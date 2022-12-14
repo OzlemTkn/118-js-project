@@ -10,7 +10,7 @@
     <h3>Number Methods</h3>
     <script>
         let a = '100';//numeric string
-        let b = 1.23;
+        let b = 123;
         let c= 1n;
         let d = 1234567809876543465n;// bigInt data tipinde bir degeri number bir degerle toplayamayiz, her ikisi de bigInt olmalidir.
         document.write(typeof d);//bigInt
@@ -31,7 +31,8 @@
 
     let num = 123.355;
     document.write(num.toPrecision(3)+ '<br>');//123
-     //4. number();
+
+     //4. number(); String'i veya boolean degerleri number'a cevirir. 
      document.write(Number(true)+ '<br>');//1
      document.write(Number(false)+ '<br>');//0
      document.write(Number('   15   ')+ '<br>');//15

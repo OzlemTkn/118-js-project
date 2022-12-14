@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ternary </h3>
+    <!-- Ternary syntax: if yapilarının tek satırda basit yazılmış halidir.
+    mantıksal ifade ? 'Eger doğruysa' : ' Eger yanlışsa' 
+    Ornek: Kullanıcının girdigi yasa gore oy verip veremeyecegini gosteren kodu yaziniz-->
+    <input type="number" name="" id="ageValue">
+    <button onclick="voteable()">Age</button>
+    <p id="vote">Sonuc:</p>
+<script>
+ function voteable(){
+    let age = document.getElementById('ageValue').value;
+
+    let result = (age>17) ? 'Oy verebilirsiniz' : 'Henüz oy veremezsiniz';
+    document.getElementById('vote').innerHTML = result;
+ }
+</script>
+</body>
+</html>

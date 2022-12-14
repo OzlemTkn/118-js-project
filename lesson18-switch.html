@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Javascript Switch-Case</h3>
+    <!-- switch syntax:Herhangi bir ifadeyi asagidaki kosullarla karsilastirir. Hangisiyle eslesirse, o kod blogunu calistirir.
+    switch(expression){
+        case x:
+        //code block
+        break;
+        case y:
+        //code block
+        break;
+        default:
+        //code block
+    } 
+    Ornek: Gunun tarihine gore gunlerden ne oldugunu yazan kodu yaziniz.-->
+<p id = 'myDay'></p>
+<script>
+    let day;
+    switch(new Date().getDay()){// Date() methodu bugunun tarihini getirir. getDay() tarihin gununu 0-6 ya numaralandırır. Bugunun tarihine gore Wednesday:3 oldugu için sonucu alabildik. 
+        case 0:
+        day='Sunday';
+        break;
+        case 1:
+        day= 'Monday';
+        break;
+        case 2:
+        day='Tuesday';
+        break;
+        case 3:
+        day= 'Wednesday';
+        break;
+        case 4:
+        day='Thursday';
+        break;
+        case 5:
+        day= 'Friday';
+        break;
+        case 6:
+        day='Saturday';
+        break;
+    }
+   document.getElementById('myDay').innerHTML = `Today is ${day}`;
+
+</script>
+
+</body>
+</html>

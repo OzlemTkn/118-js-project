@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="fiyat" >
+    <button onclick="indirim()">Hesapla</button>
+    <p id="sonuc">Sonuc: </p>
+    <script>
+        function indirim(){
+          let girilenFiyat =  document.getElementById('fiyat').value;
+          if(girilenFiyat>500){
+            girilenFiyat *= 0.9;;//%10 luk bir indirim yaptı
+          }else if(girilenFiyat>300){
+            girilenFiyat *=0.93;;//%7 lik bir indirim yaptı
+          }else{
+            girilenFiyat *=0.95;//%5 lik bir indirim yaptı
+        }
+        document.getElementById('sonuc').innerHTML = `Sonuc: ${girilenFiyat}`;
+    }
+    </script>
+</body>
+</html>

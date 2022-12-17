@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="cost" >
+    <button onclick="discount()">Hesapla</button>
+    <p id="sonuc">Sonuc: </p>
+    <script>
+       function discount(){
+        let x =  document.getElementById('cost').value;
+        switch(true){ 
+            case(x>1500):
+            x *=0.85;
+            break;
+            case(x>1000):
+            x *=0.87;
+            break;
+            case(x>700):
+            x *=0.90;
+            break;
+            case(x>500):
+            x *=0.93;
+            break;
+            case(x>300):
+            x *=0.95;
+            break;
+            default:
+            x *=0.98;
+        }
+       document.getElementById('sonuc').innerHTML = `Sonuc: ${x}`;
+
+       } 
+        
+      
+    </script>
+</body>
+</html>

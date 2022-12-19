@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h3>Ternary-if Örneği</h3>
+    <input type="text" id="age">
+    <button onclick="myFunction()">TIKLA</button>
+    <p id ='test'></p>
+    <script>
+function myFunction(){
+    let voteable ;
+    let myAge = document.getElementById('age').value;
+ if(isNaN(myAge)){//isNaN-> (Not A Number)number degil mi?
+voteable = 'Not a number';
+ }else{
+    voteable = (myAge>17) ? 'Oy verebilirsiniz' : 'Henüz oy veremezsiniz';
+ }
+ document.getElementById('test').innerHTML = voteable;
+}
+    </script>
 </body>
 </html>

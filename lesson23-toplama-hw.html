@@ -11,13 +11,14 @@
         <input type="number" name="" id="sayi1" placeholder="sayi1">
         <input type="number" name="" id="sayi2" placeholder="sayi2">
         <button onclick="topla()">Topla</button>
-        <div id="sonuc"></div>
+        <h3 id="sonuc"> </h3>
+
 <script>
     function topla(){ 
         let sayi1 = document.querySelector("#sayi1").value; 
         let sayi2 = document.querySelector("#sayi2").value; 
 
-        let sonuc = Number(sayi1)  + Number(sayi2); 
+        let sonuc = Number(sayi1) + Number(sayi2) ; 
         document.querySelector("#sonuc").innerHTML = `Sonuc : <b> ${sonuc} </b>`; 
     }
 

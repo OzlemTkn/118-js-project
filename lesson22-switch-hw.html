@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" name="" id="cost" >
+    <input type="number" name="" id="cost"  >
     <button onclick="discount()">Hesapla</button>
     <p id="sonuc">Sonuc: </p>
     <script>
@@ -15,7 +15,7 @@
         let x =  document.getElementById('cost').value;
         switch(true){ 
             case(x>1500):
-            x *=0.85;
+            x *=0.85; // --> x = x - x*0.15;
             break;
             case(x>1000):
             x *=0.87;

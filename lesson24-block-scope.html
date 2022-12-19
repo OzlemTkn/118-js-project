@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<p id = 'test'></p>
+<!-- Blok kapsamı ES6(2015) ten sonra, const ve let'ten sonra gelistirildi -->
+<script>
+//let ve const'ta blok scope var ama var da yok. 
+// {   } içerisindeki degiskenlere disardan erisilemez
+let a = 'ozlem';
+{
+let a = 'Ali';
+}
+console.log(a);//ozlem --> blogun icerisinde olusturdugunuz variable'a disardan ulasamazsiniz.
+// console.log(a);//Uncaught ReferenceError: a is not defined
+// a burada gorulemez
+b = 'Ela';
+{
+var b = 'Veli';
+}
+console.log(b);//Veli -> degeri guncellenir
+//var'da variable declare etmeden kullanilabilir. 
+let z = 7;// izin verilir
+{
+let z= 3;// izin verilir
+}
+{
+let z = 5;//izin verilir
+}
+console.log(z);// 7
+//var --> global scope
+carName = 'Volvo';// var declare edilmeden de kullanılır. 
+document.getElementById('test').innerHTML = carName;
+
+</script>
+</body>
+</html>

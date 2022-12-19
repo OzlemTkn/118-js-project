@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.Declaring Functions:
+    function greeting(){
+        console.log('Hello, how are you?');
+    }
+//2.Calling function
+greeting();//Hello, how are you?
+//3. Parametreli function 
+function greetingPerson(person){
+console.log(`Hello ${person} `);
+}
+//4.Calling function
+greetingPerson('Ozlem');//Hello Ozlem
+greetingPerson(6);//Hello 6
+greetingPerson(true);//Hello true
+// Fonksiyonu nerde cagirirsaniz orda calisir.
+
+//5. Birden fazla parametreli fonksiyon olusturma
+function personInfo(fName,lName,age,location){
+console.log(`${fName} ${lName} ${age} ${location}`);
+}
+//calling function
+personInfo('Ela','Aksu',30,'Almanya');//Ela Aksu 30 Almanya
+//6. Birden fazla parametreli fonksiyonu default degerleri ile olusturma
+function personInfo2(fName='Hale',lName='Yaman',age=45,location='Hollanda'){
+    console.log(`${fName} ${lName} ${age} ${location}`);
+    }
+    //calling function
+    personInfo2();//Hale Yaman 45 Hollanda
+//7. return ile function olusturma
+function sum(){
+    let a = 23;
+    let b = 34;
+    let toplam = a+b ;
+    return toplam;//Return genellikle sonuc getirir, fonksiyonun tamamlandigini gosterir.
+    }
+console.log(sum());//57--> parantezsiz yazarsaniz fonksiyonun kendisini yazar.
+
+// 8. fonksiyonlar declare etmeden önce veya sonra calıştırılabilir.
+add(10,30);//40 
+function add(a,b){
+console.log(a+b);
+}
+add(45,35);//80
+
+//9. Fonksiyona isim vermeden declare edebiliriz. Cok kullanilan bir yontem.
+ let fark = function(x,y){
+    let f =  x-y;
+    return f;
+ }
+ console.log(fark(12,6));//6
+//ARROW FUNCTION:
+//Arrow function olusturma : MUST:function kelimesini ve function ismini sil. 
+let arrow  = (x,y) => {
+    let f =  x-y;
+    return f;
+ }
+ console.log(arrow(12,6));//6
+//Optional: suslu parantezleri ve return kelimesini silebilirsiniz.
+let arrow2 = (x,y) => f = x-y;
+console.log(arrow2(12,6));//6
+
+
+</script>
+</body>
+</html>

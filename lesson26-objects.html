@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript Objects</h3>
+    <p id ='car'></p>
+    <p id ='car1'></p>
+    <div id="personInfo"></div>
+    <script>
+        /* Object de bir variable'dir, ama cok fazla datayi saklayabilir. 
+         Objectlerde name:value deger şeklinde gosterilir, {} parantez icerisinde virgülle ayrilarak yazilir.
+         Genellikle const anahtar kelimesi yaygin kullanilir.Best practice.
+          */
+          //Bir degisken cagirma  
+        const car = 'volvo';
+        //Object olusturma
+        const myCar = { 
+                type:'VW', 
+                model:'Passat', 
+                color:'sugar', 
+                year:2022 
+            };
+    //Olusturulan Object'ten deger goruntulemek
+    document.getElementById('car').innerHTML = myCar;//[object Object]
+    document.getElementById('car1').innerHTML = 'Benim arabamın markası ' + myCar.type + ' ve rengi ' + myCar.color;
+
+    //Object özelliklerine ulaşmak icin iki farkli yontem vardır.
+    //1. (dot(.) notation) objectName.propertyName--> value.
+    //2. objectName['PropertyName']
+    document.write(myCar['type'] + '<br>');//VW
+    document.write(myCar['color']);//sugar
+
+    //Metodlar ve fonksiyonlar object içerisinde kullanilabilir.
+    const person = {
+        fName: 'Ela',
+        lName:'Demir', 
+        age:30, 
+        id:223,
+        fullName:function(){
+            return this.fName +' '+ this.lName;
+        }
+     };
+     console.log(person.fullName());
+     document.getElementById('personInfo').innerHTML = person.fullName();//Ela Demir
+
+// This nedir? Ana object'i belirtir. Ana object'ten degerleri getirir. This bir variable degildir, degerini degistiremezsiniz. 
+     // Object olusturalim
+     const personInfo = { name:'Emre', SName:'Tek', Country:'Turkey',age:26};
+     //Object icinden degerleri getirme
+     console.log(typeof personInfo); //object
+     console.log(personInfo.SName);//Tek
+     console.log(personInfo['Country']);//Turkey
+     //Object icindeki degerleri guncelleme
+     personInfo.Country='USA';
+     console.log(personInfo.Country);//USA
+     //2.yol:
+     personInfo['SName']='Caliskan';
+     console.log(personInfo.SName);//Caliskan
+     
+     //Nested Objects:
+
+    </script>
+</body>
+</html>

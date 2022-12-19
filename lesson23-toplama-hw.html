@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="number" name="" id="sayi1" placeholder="sayi1">
+        <input type="number" name="" id="sayi2" placeholder="sayi2">
+        <button onclick="topla()">Topla</button>
+        <div id="sonuc"></div>
+<script>
+    function topla(){ 
+        let sayi1 = document.querySelector("#sayi1").value; 
+        let sayi2 = document.querySelector("#sayi2").value; 
+
+        let sonuc = Number(sayi1)  + Number(sayi2); 
+        document.querySelector("#sonuc").innerHTML = `Sonuc : <b> ${sonuc} </b>`; 
+    }
+
+</script>
+        
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h3>Array Methods</h3>
+    <script>
+        //Array Methods:
+        const names = ['Ela','Hasan','Ali','Hale','Jale'];
+        console.log(typeof(names));//object
+
+        //1. push():arrayin SONUNA bir veya birden fazla element EKLER.Elementler virgülle ayrılmalıdır. 
+        names.push(5);
+        console.log(names);//['Ela', 'Hasan', 'Ali', 'Hale', 'Jale', 5]
+        //2. unshift(): arrayin BASINA element EKLER. 
+        names.unshift('Okan');
+        console.log(names);//['Okan', 'Ela', 'Hasan', 'Ali', 'Hale', 'Jale', 5]
+
+        //3.pop(): arrayin SONUNDAN element SİLER. 
+        let silinen = names.pop();//bir variable'a aktarıp cagirdigimizda silinen elementi getirir. 
+        console.log(silinen);//5
+        console.log(names);//['Okan', 'Ela', 'Hasan', 'Ali', 'Hale', 'Jale']
+
+        //4.shift(): arrayin BASINDAN element SİLER. 
+        names.shift();
+        console.log(names);//['Ela', 'Hasan', 'Ali', 'Hale', 'Jale']
+
+        //Array icerisinde baska bir array olusturabilirsiniz
+        const ages = [21,2,4,23,56,21,4];
+        names.push(ages);
+        console.log(names[5]);//[2, 4, 23, 56, 21]
+        console.log(names);//['Ela', 'Hasan', 'Ali', 'Hale', 'Jale', [2, 4, 23, 56, 21]]
+        //5. isArray(): bir arrayin array olup olmadigini sorgular, boolean return eder. 
+        const a = Array.isArray(names);
+        console.log(a);//true
+
+        const a1 = Array.isArray('2');
+        console.log(a1);//false
+
+        //6. indexOf(item,starting index): elementin ilk index numarasını getirir. 
+       // lastIndexof(item, from) : elementin son index numarısını getirir. 
+       //Note: Eger elmentle hiç karsilaşmazsa -1 getirir.
+       console.log(ages.indexOf(4));//1
+       console.log(ages.indexOf(4,2));//5--> 2.indexten itibaren arar. 
+       console.log(ages.lastIndexOf(21));//5
+       console.log(ages.lastIndexOf(0));//-1--> cunku elementler içerisinde 0 yoktur. 
+
+       //7. includes(item, starting index): bir elmentin array içerisinde olup olmadigini boolean olarak return eder.
+        let isInclude = ages.includes(23);
+        console.log(isInclude);//true
+
+        let isIncludes = ages.includes(23,4);
+        console.log(isIncludes);//false
+
+        //8. splice(): bir elementi silmek, element eklemek, element update etmek için kullanilir.
+        //splice(start); baslangıc indexinden itibaren geri kalan kısmı siler
+        //splice(start, silinenSayisi)
+        //splice(start, silinenSayisi, elementEkle1, elementEkle2,,,)
+
+        const fruits =['apple','banana','mango','orange',3, false, 45];
+        //fruits.splice(2);// 2.indexden sonraki kısmı siler
+        console.log(fruits);//['apple', 'banana']
+
+        //splice(start, silinenSayisi)
+        fruits.splice(2,2);
+        console.log(fruits);//['apple', 'banana', 3, false, 45]
+        fruits.splice(0,0)
+        console.log(fruits);//['apple', 'banana', 3, false, 45]
+        //splice(start, silinenSayisi, elementEkle1, elementEkle2,,,)
+        fruits.splice(1,2,'kiwi','peach');//yeni eklenen elementleri baslangic indexi olarak belirtilen yere yazar. 
+        console.log(fruits);//['apple', 'kiwi', 'peach', false, 45]
+
+        //Splice da baslangic indexi negatif deger alabilir. 
+        //O zaman sondan baslar. 
+        fruits.splice(-5, 1 ,3,3);// negatif degerlerde  -1 ile sondan başlar.  
+        console.log(fruits);//[3, 3, 'kiwi', 'peach', false, 45] apple silindi yerine 3 ler geldi. 
+
+        //9.concat() : arrayleri birleştirir. 
+        const drinks = ['water','coke','milk','juice','ayran'];
+        const snacks = ['doritos', 'cheetos','ruffles'];
+        let list = drinks.concat(snacks);
+        console.log(list);//['water', 'coke', 'milk', 'doritos', 'cheetos', 'ruffles']
+
+        //10. slice(start-include, end-exclude)
+        //['water','coke','milk','juice','ayran'];
+       let sliced =  drinks.slice(1,3);//1 dahil, 3 dahil degil
+      console.log(sliced);//['coke', 'milk']
+
+       let sliced2 =  drinks.slice(2);//1 dahil, 3 dahil degil
+       console.log(sliced2);//['milk', 'juice', 'ayran']
+
+        //slice negative parametre ile calisir. Sondan -1 ile baslayarak basa dogru gelir.
+        let sliced3 =  drinks.slice(-3,-1);
+       console.log(sliced3);//['milk', 'juice']
+
+       //11. reverse();arrayi ters cevirir.
+       let ages2 = [100, -1, 0, 1, 90, 21,2,23,56];
+       let sirali = ages2.reverse();
+       console.log(sirali);//[4, 21, 56, 23, 4, 2, 21]
+       //12. sort();default olarak ascending(kucukten buyuge) sıralar. 
+       const points = [40, 100, 1, 5, 25, 10];
+       points.sort(function(a, b){
+        return a-b
+        });
+        console.log(points);//[1, 5, 10, 25, 40, 100]
+        
+    </script>
+</body>
+</html>

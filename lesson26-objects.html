@@ -25,6 +25,7 @@
                 color:'sugar', 
                 year:2022 
             };
+         
     //Olusturulan Object'ten deger goruntulemek
     document.getElementById('car').innerHTML = myCar;//[object Object]
     document.getElementById('car1').innerHTML = 'Benim arabamın markası ' + myCar.type + ' ve rengi ' + myCar.color;
@@ -44,11 +45,12 @@
         fullName:function(){
             return this.fName +' '+ this.lName;
         }
-     };
+     };// Burada this ana object olan person'ı belirtir. 
      console.log(person.fullName());
      document.getElementById('personInfo').innerHTML = person.fullName();//Ela Demir
 
-// This nedir? Ana object'i belirtir. Ana object'ten degerleri getirir. This bir variable degildir, degerini degistiremezsiniz. 
+// This nedir? Ana object'i belirtir. Ana object'ten degerleri getirir. 
+// This bir variable degildir, degerini degistiremezsiniz. 
      // Object olusturalim
      const personInfo = { name:'Emre', SName:'Tek', Country:'Turkey',age:26};
      //Object icinden degerleri getirme
@@ -56,7 +58,7 @@
      console.log(personInfo.SName);//Tek
      console.log(personInfo['Country']);//Turkey
      //Object icindeki degerleri guncelleme
-     //1.yol (. notation)
+     //1.yol: (. notation)
      personInfo.Country='USA';
      console.log(personInfo.Country);//USA
      //2.yol: [] kullanabilirsiniz.
@@ -66,7 +68,28 @@
      personInfo.age=35;
      console.log(personInfo.age);//35
 
-     //Nested Objects:
+     //Nested Objects:  
+
+     const personalInformation = {
+        fName: 'Ela',
+        lName:'Demir', 
+        age:30, 
+        id:223,
+        address:{
+            street:'Yard', 
+            city:'New York City',
+            state:'New York'
+        },
+        hobbies: ['sport','dance','music'],
+        salary:function(){
+            return 150;
+        }
+     }
+     console.log(personalInformation.address);//{street: 'Yard', city: 'New York City', state: 'New York'}
+     console.log(personalInformation.address.city);//New York City
+     console.log(personalInformation.salary());//150
+     console.log(personalInformation.hobbies);//['sport', 'dance', 'music']
+
 
     </script>
 </body>

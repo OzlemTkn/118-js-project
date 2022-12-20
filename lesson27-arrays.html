@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Javascript Arrays</h3>
+    <script>
+        /*ARRAYS: Array'ler özel object türleridir. İcerisinde coklu data saklayabilir.
+        Arraylerde elementlere index numarası ile ulaşabilirsiniz. 
+        [] parantezler kullanilir. 
+        Array Olusturma 1. yol
+                            0.     1.    2.     3.     */
+        let friendList = ['Ela', 'Jale','Ali','Melek'];
+        console.log(friendList);//['Ela', 'Jale','Ali','Melek']
+        //2. yol array olusturmak
+        //let friendList1 = new Array('Ali','Ela','Jale','Hale');
+       //console.log(friendList1);//['Ali', 'Ela', 'Jale', 'Hale']
+
+        //arrayden element cekmek/goruntulemek
+        console.log(friendList[1]);//Jale
+        console.log(friendList[4]);//undefined --> cunku 4.indexte element yok
+        //Array içerisindeki elementleri editlemek icin 
+        //Eger cagirilan index numasında element varsa günceller. 
+        friendList[2]='Veli';
+        console.log(friendList);//['Ela', 'Jale', 'Veli', 'Melek']
+        //Eger cagilan index numarasında element yoksa 
+        friendList[4]='Orhan';
+        console.log(friendList);//['Ela', 'Jale', 'Veli', 'Melek', 'Orhan']
+        //Eger arada bosluk varsa, onları undefined ile doldurur. 
+        friendList[8]='Emre';
+        console.log(friendList);//['Ela', 'Jale', 'Veli', 'Melek', 'Orhan', empty × 3, 'Emre']
+        console.log(friendList[5]);//undefined
+
+        for(let i=0; i<friendList.length; i++){
+            console.log(friendList[i]); //'Ela', 'Jale', 'Veli', 'Melek', 'Orhan', empty × 3, 'Emre'
+        }
+
+    </script>
+</body>
+</html>

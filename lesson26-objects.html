@@ -56,12 +56,16 @@
      console.log(personInfo.SName);//Tek
      console.log(personInfo['Country']);//Turkey
      //Object icindeki degerleri guncelleme
+     //1.yol (. notation)
      personInfo.Country='USA';
      console.log(personInfo.Country);//USA
-     //2.yol:
+     //2.yol: [] kullanabilirsiniz.
      personInfo['SName']='Caliskan';
      console.log(personInfo.SName);//Caliskan
-     
+     // . notation daha kullanışli ve yaygındır. 
+     personInfo.age=35;
+     console.log(personInfo.age);//35
+
      //Nested Objects:
 
     </script>

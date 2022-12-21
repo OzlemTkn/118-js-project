@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Javascript Loops</h3>
+    <!-- js'de farkli tiplerde döngüler kullanilir:
+    - for-loops: Apex'le aynidir
+    - for/in : Object'le calisir, object'ten elementleri cekmek icin kullanilir. Sıralama önemli degilse kullanin. 
+    - for/of : Object veya string'den sırayla element cekmek için kullanilir. 
+    - while: herhangi bir kosul true donerse calişir.
+    - do-while: herhangi bir kosul true donerse calişir, kosulun saglanip saglanmdigini test etmeden en az bir kere calistirir. 
+    -->
+    
+    <script>
+        /*For Loop: for(statement 1; statement 2; statement 3){
+            //Code block
+         }
+         */ 
+         for(let i = 0 ; i< 6 ; i++){
+            console.log('Sayi ' + i);
+         }
+        //for dongusunu arrayle kullanalim, arrayden element cekelim.
+        const cars = ['volvo', 'fiat','VW','Honda'];
+        let text ='';
+        for(let i = 0; i<cars.length ; i++ ){
+          text += cars[i] + ' ';
+        }
+        console.log(text);//volvo fiat VW Honda 
+
+        /*For In Loop: Array veya object ile çalışabilir.
+        Syntax: for(key in object){
+            //code blocks
+        }*/
+
+        const person = { name: 'Ela', 
+                         sName:'Demir', 
+                         age:35
+                        };
+        let txt='';
+        for(let x in person){
+            txt += person[x] + ' ';
+        }
+        console.log(txt);//Ela Demir 35 
+    // x--> person.name, person.sName, person.age
+    // txt = txt+person[x]  --> txt += person[x] aynı anlama gelir. 
+
+    // For of: for(variable of iterable){
+        //code blocks
+    //}  --> String, Array, Maps,,, verileri veya karakterleri tek tek çekmek icin kullanilir. Siralama onemli ise for veya for-of kullnilir, siralama önemli degilse for-in kullanabilirsiniz. 
+    const fruits = ['apple','orange','banana','mango'];
+    let txt1 ='';
+    for(let y of fruits){
+        txt1 += y + '<br>';
+    }
+    document.write(txt1);//apple,orange,banana,mango
+    // for of --> iteration from string
+    let str = 'Javascript is easy';
+    let txt2 = '';
+    for(let z of str){
+        txt2 += z + '*';
+    }
+    document.write(txt2);//J*a*v*a*s*c*r*i*p*t* *i*s* *e*a*s*y*
+    
+    </script>
+</body>
+</html>
